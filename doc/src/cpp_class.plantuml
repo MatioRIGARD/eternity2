@@ -1,0 +1,97 @@
+@startuml cpp_class_diagram
+
+enum PieceColor
+{
+    COLOR_BORDER,
+    COLOR_ORANGE_LIGHT_BLUE_CROSS,
+    COLOR_PINK_YELLOW_CROSS,
+    COLOR_VIOLET_GREEN_CIRCLE,
+    COLOR_LIGHT_BLUE_PINK_CROSS,
+    COLOR_GREEN_BLUE_CIRCLE,
+    COLOR_VIOLET_YELLOW_CIRCLE,
+    COLOR_LIGHT_BLUE_PINK_SQUARE,
+    COLOR_BLUE_ORANGE_CROSS,
+    COLOR_BLUE_YELLOW_FLOWER,
+    COLOR_VIOLET_LIGHT_BLUE_CROSS,
+    COLOR_GREEN_ORANGE_CROSS,
+    COLOR_YELLOW_BLUE_SQUARE,
+    COLOR_RED_ORANGE_HOLLOW_SQUARE,
+    COLOR_GREEN_PINK_CROSS,
+    COLOR_YELLOW_GREEN_HOLLOW_SQUARE,
+    COLOR_BLUE_LIGHT_BLUE_HOLLOW_SQUARE,
+    COLOR_PINK_LIGHT_BLUE_HOLLOW_FLOWER,
+    COLOR_YELLOW_LIGHT_BLUE_STAR,
+    COLOR_VIOLET_YELLOW_STAR,
+    COLOR_ORANGE_VIOLET_STAR,
+    COLOR_PINK_YELLOW_SQUARE,
+    COLOR_BLUE_PINK_CIRCLE
+}
+
+enum PieceOrientation
+{
+    ORIENTATION_UP,
+    ORIENTATION_RIGHT,
+    ORIENTATION_DOWN,
+    ORIENTATION_LEFT
+}
+
+class PuzzlePrinter
+{
+    + printRaw(Puzzle *puzzle): void
+    + printPuzzleInfos(PuzzleManager *PuzzleManager): void
+}
+
+class PuzzleSolver
+{
+
+}
+
+class PuzzleManager
+{
+    - m_puzzlePieces: PuzzlePieces
+    - m_puzzle: Puzzle
+    - m_solver: PuzzleSolver
+
+    + loadFromJsonFile(std::string path): int
+
+    + getPiecesWithColor(PieceColor color): std::vector<PuzzlePiece>
+
+    + getPiecesWithTwoAdjacentIdenticalColors(PieceColor color): std::vector<PuzzlePiece>
+    + getPiecesWithTwoOpositeIdenticalColors(PieceColor color): std::vector<PuzzlePiece>
+    + getPiecesWithThreeIdenticalColors(PieceColor color): std::vector<PuzzlePiece>
+    + getPiecesWithTwoIdenticalColors(PieceColor color): std::vector<PuzzlePiece>
+
+    + getPiecesWithTwoAdjacentIdenticalColors(): std::vector<PuzzlePiece>
+    + getPiecesWithTwoOpositeIdenticalColors(): std::vector<PuzzlePiece>
+    + getPiecesWithThreeIdenticalColors(): std::vector<PuzzlePiece>
+    + getPiecesWithTwoIdenticalColors(): std::vector<PuzzlePiece>
+}
+
+class Puzzle
+{
+    - m_pieces[16][16]: PuzzlePiece*
+}
+
+class PuzzlePiece
+{
+    - m_number: int
+    - m_positionHeight: int
+    - m_positionWidth: int
+    - m_orientation: PieceOrientation
+    - m_colors[4]: PieceColor
+}
+
+
+
+Main *-- PuzzleManager
+Main *-- PuzzlePrinter
+PuzzlePiece *-- PieceColor
+PuzzlePiece *-- PieceOrientation
+PuzzleManager *-- PuzzleSolver
+PuzzleManager *-- Puzzle
+PuzzleManager *-- PuzzlePiece
+Puzzle o-- PuzzlePiece
+PuzzlePrinter o-- PuzzleManager
+PuzzlePrinter o-- Puzzle
+
+@enduml
