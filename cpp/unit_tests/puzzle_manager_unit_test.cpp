@@ -1,17 +1,15 @@
 #if UNIT_TEST_MODE==1
 
 #include "core/config.h"
-#include "core/Puzzle.h"
-#include "core/PuzzleManager.h"
-#include "unit_tests/tdd_unit_test.h"
-#include "core/PuzzleLogger.h"
+#include "core/puzzle.h"
+#include "core/puzzle_manager.h"
+
+#include "core/puzzle_logger.h"
 
 #include <gtest/gtest.h>
 #include <string>
 #include <vector>
 #include <algorithm>
-
-#define ADDITIONNAL_LOGS  0
 
 
 
@@ -82,7 +80,7 @@ TEST(PuzzleManager, GetPiecesWithColor) {
         EXPECT_GT(borderQty, 0)  << "The piece n." << static_cast<int>(piece.m_number) << " does not contain a border as it should";
     }
     EXPECT_EQ(borderPieces.size(), 60) << "In loaded puzzle, expected 60 border pieces but got " << borderPieces.size() << " pieces instead";
-#if ADDITIONNAL_LOGS
+#if UNIT_TEST_ADDITIONNAL_LOGS
     PuzzleLogger::printPiecesInfos(borderPieces);
 #endif
 }
@@ -99,7 +97,7 @@ TEST(PuzzleManager, SetBasicPuzzlePiecesPlacement) {
     for(int i=0; i<PIECES_QUANTITY; i++) {
         EXPECT_EQ(puzzlePieces[i].m_number, i) << "Expected the " << i+1 << "th piece to be the piece n." << i+1 << "but is the piece n." << static_cast<int>(puzzlePieces[i].m_number);
     }
-#if ADDITIONNAL_LOGS
+#if UNIT_TEST_ADDITIONNAL_LOGS
     PuzzleLogger::printPuzzleRaw(puzzlePieces);
 #endif
 }
@@ -124,7 +122,7 @@ TEST(PuzzleManager, GetPiecesWithTwoAdjacentIdenticalColors) {
         EXPECT_EQ(hasTwoAdjacentIdenticalColors, true) << "Piece n." << static_cast<int>(piece.m_number) << " doesn't contains at least 2 ajacent identical colors";
     }
 
-#if ADDITIONNAL_LOGS
+#if UNIT_TEST_ADDITIONNAL_LOGS
     PuzzleLogger::printPiecesInfos(puzzlePieces);
 #endif
 }
@@ -148,7 +146,7 @@ TEST(PuzzleManager, GetPiecesWithTwoOpositeIdenticalColors) {
         EXPECT_EQ(hasTwoOppositeIdenticalColors, true) << "Piece n." << static_cast<int>(piece.m_number) << " doesn't contains at least 2 opposite identical colors";
     }
 
-#if ADDITIONNAL_LOGS
+#if UNIT_TEST_ADDITIONNAL_LOGS
     PuzzleLogger::printPiecesInfos(puzzlePieces);
 #endif
 }
@@ -174,7 +172,7 @@ TEST(PuzzleManager, GetPiecesWithThreeIdenticalColors) {
         EXPECT_EQ(hasThreeIdenticalColors, true) << "Piece n." << static_cast<int>(piece.m_number) << " doesn't contains at least 3 identical colors";
     }
 
-#if ADDITIONNAL_LOGS
+#if UNIT_TEST_ADDITIONNAL_LOGS
     PuzzleLogger::printPiecesInfos(puzzlePieces);
 #endif
 }
@@ -202,7 +200,7 @@ TEST(PuzzleManager, GetPiecesWithTwoIdenticalColors) {
         EXPECT_EQ(hasTwoIdenticalColors, true) << "Piece n." << static_cast<int>(piece.m_number) << " doesn't contains at least 2 identical colors";
     }
 
-#if ADDITIONNAL_LOGS
+#if UNIT_TEST_ADDITIONNAL_LOGS
     PuzzleLogger::printPiecesInfos(puzzlePieces);
 #endif
 }
@@ -218,10 +216,5 @@ TEST(PuzzleManager, PrintInfos) {
     PuzzleLogger::writeInLogFilePuzzleRaw(puzzleManager);
 }
 
-
-int main(int argc, char **argv) {
-    testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}
 
 #endif  // UNIT_TEST_MODE

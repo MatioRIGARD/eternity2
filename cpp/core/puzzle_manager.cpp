@@ -1,4 +1,4 @@
-#include "core/PuzzleManager.h"
+#include "core/puzzle_manager.h"
 #include "core/config.h"
 #include <boost/property_tree/json_parser.hpp>
 #include <fstream>

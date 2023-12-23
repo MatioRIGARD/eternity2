@@ -22,4 +22,6 @@
 #define PUZZLE_X_DIMENSION                      16
 #define PUZZLE_Y_DIMENSION                      16
 
+#define UNIT_TEST_ADDITIONNAL_LOGS              0
+
 #endif // CONFIG_H

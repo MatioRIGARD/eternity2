@@ -1,4 +1,4 @@
-#include "core/PuzzleLogger.h"
+#include "puzzle_logger.h"
 #include <iomanip>
 #include <sstream>
 #include <fstream>

@@ -1,8 +1,8 @@
 #ifndef PUZZLE_LOGGER_H
 #define PUZZLE_LOGGER_H
 
-#include "core/Puzzle.h"
-#include "core/PuzzleManager.h"
+#include "core/puzzle.h"
+#include "core/puzzle_manager.h"
 #include "core/config.h"
 #include <vector>
 #include <iostream>

@@ -1,8 +1,8 @@
 #ifndef PUZZLE_MANAGER_H
 #define PUZZLE_MANAGER_H
 
-#include "core/Puzzle.h"
-#include "core/PuzzleSolver.h"
+#include "core/puzzle.h"
+#include "core/puzzle_solver.h"
 #include <string>
 #include <vector>
 #include <map>

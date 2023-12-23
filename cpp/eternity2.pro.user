@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 9.0.1, 2023-12-17T18:33:44. -->
+<!-- Written by QtCreator 9.0.1, 2023-12-21T21:39:55. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -69,8 +69,16 @@
     <value type="bool" key="AutoTest.Framework.QtTest">true</value>
    </valuemap>
    <valuemap type="QVariantMap" key="AutoTest.CheckStates">
-    <value type="Qt::CheckState" key="1@/home/matio/Workspace/Projects/software/eternity2/cpp/unit_tests/tdd_unit_test.cpp:GetPieces">Checked</value>
-    <value type="Qt::CheckState" key="1@/home/matio/Workspace/Projects/software/eternity2/cpp/unit_tests/tdd_unit_test.cpp:Puzzle">Checked</value>
+    <value type="Qt::CheckState" key="1@/home/matio/Workspace/Projects/software/eternity2/cpp/unit_tests/tdd_unit_test.cpp:GetPiecesWithColor">Checked</value>
+    <value type="Qt::CheckState" key="1@/home/matio/Workspace/Projects/software/eternity2/cpp/unit_tests/tdd_unit_test.cpp:GetPiecesWithThreeIdenticalColors">Checked</value>
+    <value type="Qt::CheckState" key="1@/home/matio/Workspace/Projects/software/eternity2/cpp/unit_tests/tdd_unit_test.cpp:GetPiecesWithTwoAdjacentIdenticalColors">Checked</value>
+    <value type="Qt::CheckState" key="1@/home/matio/Workspace/Projects/software/eternity2/cpp/unit_tests/tdd_unit_test.cpp:GetPiecesWithTwoIdenticalColors">Checked</value>
+    <value type="Qt::CheckState" key="1@/home/matio/Workspace/Projects/software/eternity2/cpp/unit_tests/tdd_unit_test.cpp:GetPiecesWithTwoOpositeIdenticalColors">Checked</value>
+    <value type="Qt::CheckState" key="1@/home/matio/Workspace/Projects/software/eternity2/cpp/unit_tests/tdd_unit_test.cpp:LoadDummyPuzzleFile">Checked</value>
+    <value type="Qt::CheckState" key="1@/home/matio/Workspace/Projects/software/eternity2/cpp/unit_tests/tdd_unit_test.cpp:LoadVeryEasyPuzzleFile">Checked</value>
+    <value type="Qt::CheckState" key="1@/home/matio/Workspace/Projects/software/eternity2/cpp/unit_tests/tdd_unit_test.cpp:PrintInfos">Checked</value>
+    <value type="Qt::CheckState" key="1@/home/matio/Workspace/Projects/software/eternity2/cpp/unit_tests/tdd_unit_test.cpp:PuzzleManager">Checked</value>
+    <value type="Qt::CheckState" key="1@/home/matio/Workspace/Projects/software/eternity2/cpp/unit_tests/tdd_unit_test.cpp:SetBasicPuzzlePiecesPlacement">Checked</value>
    </valuemap>
    <value type="int" key="AutoTest.RunAfterBuild">0</value>
    <value type="bool" key="AutoTest.UseGlobal">true</value>
