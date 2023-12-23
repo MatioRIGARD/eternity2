@@ -21,7 +21,15 @@ HEADERS += \
         core/puzzle_manager.h \
         core/config.h
 
+# Utils
+SOURCES += \
+        utils/args_parser.cpp
+
+HEADERS += \
+        utils/args_parser.h
+
 # Unit tests
 SOURCES += \
-        unit_tests/puzzle_manager_unit_test.cpp
+        unit_tests/puzzle_manager_unit_test.cpp \
+        unit_tests/args_parser_unit_test.cpp
 
