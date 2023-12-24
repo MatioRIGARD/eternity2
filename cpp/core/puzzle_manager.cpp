@@ -158,7 +158,7 @@ void PuzzleManager::setBasicPuzzlePiecesPlacement() {
     }
 }
 
-void PuzzleManager::solve(int algoType) {
+void PuzzleManager::solve(PuzzleSolver::Algorithm algoType) {
 
 }
 

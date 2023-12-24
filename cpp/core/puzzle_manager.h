@@ -18,7 +18,7 @@ public:
     ~PuzzleManager();
 
     int loadFromJsonFile(std::string path);
-    void solve(int algoType);
+    void solve(PuzzleSolver::Algorithm algoType);
 
     static std::vector<PuzzlePiece> getPiecesWithColor(std::vector<PuzzlePiece> piecesList, PieceColor color);
     std::vector<PuzzlePiece> getPiecesWithColor(PieceColor color);
