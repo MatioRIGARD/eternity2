@@ -33,5 +33,6 @@ HEADERS += \
 # Unit tests
 SOURCES += \
         unit_tests/puzzle_manager_unit_test.cpp \
-        unit_tests/args_parser_unit_test.cpp
+        unit_tests/args_parser_unit_test.cpp \
+        unit_tests/puzzle_solver_unit_test.cpp
 

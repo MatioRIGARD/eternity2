@@ -1,4 +1,4 @@
-#if UNIT_TEST_MODE==1
+#if UNIT_TEST_MODE
 
 #include "core/config.h"
 #include "core/puzzle.h"

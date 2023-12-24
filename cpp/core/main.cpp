@@ -1,4 +1,4 @@
-#if UNIT_TEST_MODE==0
+#if !UNIT_TEST_MODE
 
 #include <iostream>
 
@@ -35,7 +35,7 @@ int main(int argc, char **argv) {
     return 0;
 }
 
-#elif UNIT_TEST_MODE==1
+#else
 
 #include <gtest/gtest.h>
 

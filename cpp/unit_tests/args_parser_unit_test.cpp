@@ -1,4 +1,4 @@
-#if UNIT_TEST_MODE==1
+#if UNIT_TEST_MODE
 
 #include <gtest/gtest.h>
 #include <string>
