@@ -2,7 +2,7 @@
 
 Work in progress...
 
-Try to implement different algorithms for solving Eternity 2 puzzle.
+Try to implement different algorithms to solve Eternity 2 puzzle.
 
 Obviously, no real hope to solve it, just for fun.
 
