@@ -57,6 +57,7 @@ int PuzzleManager::loadFromJsonFile(std::string path) {
         colorNumber = 0;
         itemNumber++;
     }
+    this->setBasicPuzzlePiecesPlacement();
 
     return 0;
 };
@@ -156,3 +157,8 @@ void PuzzleManager::setBasicPuzzlePiecesPlacement() {
         this->m_puzzlePieces[i].m_positionY = positionY;
     }
 }
+
+void PuzzleManager::solve(int algoType) {
+
+}
+
