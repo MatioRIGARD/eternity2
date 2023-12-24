@@ -2,10 +2,16 @@
 
 #include <iostream>
 
+#include "utils/args_parser.h"
+
 using namespace std;
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
+    ArgsParser argsParser;
+    argsParser.parse(argc, argv);
+
+    argsParser.getOptionValue(ArgsParser::ARG_ALGO_NUMBER);
+
     return 0;
 }
 

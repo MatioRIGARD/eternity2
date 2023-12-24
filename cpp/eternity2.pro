@@ -5,7 +5,9 @@ CONFIG -= qt
 
 LIBS += -lgtest -lpthread -lboost_system -lboost_filesystem
 
-DEFINES += UNIT_TEST_MODE=1
+DEFINES += \
+        UNIT_TEST_MODE=1 \
+        UNIT_TEST_ADDITIONNAL_LOGS=0
 
 # Core
 SOURCES += \
